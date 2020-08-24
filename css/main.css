@@ -1,0 +1,593 @@
+@charset "utf-8";
+/* MAIN.CSS */
+
+
+
+@import url(gridSetFlex.css);
+@import url(gridView.css);
+@import url(reset.css);
+@import url(core.css);
+
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+
+
+}
+
+/* 그리드 재정의 */
+.grid {
+
+	width: 1762px;
+	z-index: -1;
+
+}
+
+
+.page {
+
+	width: 100%;
+	height: 100%;
+	outline: 2px dotted red;
+}
+
+.inbox {
+	position: relative;
+	top: 50%;
+	/*세로크기의 중앙에 오도록 셋팅*/
+	transform: translateY(-50%);
+	width: 1440px;
+	max-width: 100%;
+	/*height: 100%;*/
+	margin: 0 auto;
+
+}
+
+/* 토글버튼 */
+
+.menu_toggle {
+
+	position: absolute;
+	right: 0;
+	top: 50px;
+	width: 100px;
+	height: 40px;
+	cursor: pointer;
+
+}
+
+.hambuger,
+.cross {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.hambuger span {
+
+	display: block;
+	width: 70px;
+	height: 2px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	position: relative;
+}
+
+.hambuger span:last-child {
+
+	margin: 0;
+
+}
+
+.hambuger span:before,
+.hambuger span:after {
+
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	transform: translateX(-200%);
+	transition: transform ease 500ms;
+}
+
+.hambuger span:after {
+
+	transform: translateX(0);
+}
+
+.hambuger span:last-child::before,
+.hambuger span:last-child::after {
+
+	transition-delay: 75ms;
+}
+
+.menu_toggle:hover .hambuger span::before {
+
+	transform: translateX(0);
+}
+
+.menu_toggle:hover .hambuger span:after {
+	transform: translateX(200%);
+}
+
+.menu_toggle.active .hambuger span:before {
+	transform: translateX(100%);
+}
+
+.menu_toggle.active .hambuger span:after {
+	transform: translateX(200%);
+}
+
+.cross span {
+	display: block;
+	width: 18px;
+	height: 2px;
+	background-color: #fff;
+	transform: translateY(50%) rotate(45deg) scaleX(0);
+	transition: transform ease 200ms;
+}
+
+.cross span:last-child {
+	transform: translateY(-50%) rotate(-45deg) scaleX(0);
+}
+
+.menu_toggle.active .cross span {
+	transition-delay: 450ms;
+	transform: translateY(50%) rotate(45deg) scaleX(1);
+}
+
+.menu_toggle.active .cross span:last-child {
+	transform: translateY(-50%) rotate(-45deg) scaleX(1);
+}
+
+/*////////// 1. 배너영역  /////////////*/
+
+
+.banner {
+
+	background-color: #1c1c1c;
+
+}
+
+#banner {
+
+	background: url(../images/main_profile.jpg) no-repeat 110% 300%;
+	background-size: 80%;
+}
+
+.banner_h1 {
+
+	margin-top: -200px;
+	width: 30%;
+}
+
+
+
+.banner_h1 pre {
+
+	height: 300px;
+	color: #fff;
+	font-size: 200px;
+	font-family: 'Jost', sans-serif;
+	font-weight: 100;
+	line-height: 180px;
+	transition: color .1s ease-in-out;
+
+}
+
+.banner_h1 pre:hover {
+
+	color: rgba(255, 255, 255, .5);
+	transition: color .1s cubic-bezier(.1, .7, .6, .1);
+}
+
+.banner_h2 {
+
+	padding: 60px 10px;
+
+}
+
+.banner_h2 pre {
+
+	font-family: 'Jost', sans-serif;
+}
+
+.banner_h3 {
+
+	padding: 0px 10px;
+
+}
+
+.banner_h2,
+.banner_h3 {
+
+	color: #464646;
+	letter-spacing: 3px;
+	font-weight: 400;
+}
+
+.banner_h3 a {
+
+	color: #fff;
+	font-size: 25px;
+
+}
+
+.banner_h3 a:hover {
+
+	color: rgba(255, 255, 255, .5);
+	transition: color .1s cubic-bezier(.1, .7, .6, .1);
+
+}
+
+
+
+
+/* topics */
+
+.topics {
+
+	background-color: #000238;
+	color: #e9e9e9;
+
+}
+
+#topics {
+
+
+	top: 20%;
+	transform: translate(0%);
+
+}
+
+.topics_title h2 {
+
+
+	position: absolute;
+	left: -90px;
+	font-size: 72px;
+	transform: rotate(90deg);
+	font-family: 'Jost', sans-serif;
+	font-weight: 100;
+	letter-spacing: 10px;
+	text-align: bottom;
+}
+
+.topics_list {
+
+	margin-left: 200px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 1230px;
+	height: 620px;
+
+}
+
+.topics_list li {
+
+	width: 50%;
+	position: relative;
+
+}
+
+
+.ta {
+
+	width: 100%;
+	color: #fff;
+	opacity: .9;
+	display: flex;
+
+}
+
+.topics_list .date {
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+
+}
+
+.topics_list .date strong {
+
+	font-size: 2.25rem;
+
+}
+
+
+.topics_list .date p {
+
+	position: absolute;
+	top: 10px;
+	left: 50px;
+
+}
+
+.topics_list .date i {
+
+	position: absolute;
+	top: 30px;
+	left: 50px;
+
+}
+
+.cg_sub {
+
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	z-index: 1;
+	width: 86%;
+	margin-bottom: 30px;
+
+
+}
+
+.cg_sub .cg span {
+
+	display: inline-block;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	opacity: .2;
+
+}
+
+.cg_sub h3 {
+
+	font-size: 20px;
+
+}
+
+.lazy_wrap {
+
+	position: absolute;
+	width: 500px;
+	height: 300px;
+	right: 0;
+	bottom: 0;
+	top: 20px;
+	background-color: rgba(255, 255, 255, 0);
+	display: flex;
+	justify-content: center;
+	opacity: 1;
+	transition: background .7s ease-out;
+	overflow: hidden;
+}
+
+.lazy_wrap img {
+
+	width: 300px;
+	height: 300px;
+	z-index: 2px;
+	transform: scale(1);
+	transition: all .5s ease-out;
+
+}
+
+.lazy_wrap:hover {
+
+	background-color: rgba(255, 255, 255, .3);
+}
+
+.lazy_wrap:hover img {
+
+	transform: scale(1.15);
+}
+
+
+/* 3. SCHEDULE */
+
+#schedule {
+	position: relative;
+	width: 1762px;
+	max-width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background: #fff;
+	outline: 1px solid lime;
+}
+
+.topics_title.sche h2 {
+
+	color: #000;
+	left: 10px;
+	top: 250px;
+}
+
+.schedule_list {
+
+	width: 55%;
+	position: absolute;
+
+	top: 130px;
+	left: 600px;
+}
+
+.schedule_list_detail li {
+
+	width: 100%;
+	height: 150px;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: rgba(195, 195, 195, .2);
+	line-height: 50px;
+	overflow: hidden;
+
+}
+
+.schedule_list_detail li:last-child {
+
+
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: rgba(195, 195, 195, .2);
+}
+
+.scha p {
+	display: inline-block;
+	color: #aaaaaa;
+}
+
+.schatop {
+
+	padding: 10px 0;
+}
+
+.schabt {
+
+	position: relative;
+	color: #fff;
+	font-size: 24px;
+	padding: 5px 10px;
+
+}
+
+.schabt b {
+
+	font-weight: 400;
+	color: #fff;
+	position: relative;
+	z-index: 2;
+	display: inline
+}
+
+.schabt::before,
+.schabt::after {
+
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 0;
+
+}
+
+.schabt::after {
+
+	z-index: 1;
+	background: #e8e8e8;
+	transform: translate3d(-101%, 0, 0)
+}
+
+.schabt:hover b {
+	animation-name: t-anim;
+	animation-duration: 1.4s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards
+}
+
+.schabt:hover::after {
+	animation-name: gray-anim;
+	animation-duration: 1.4s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards
+}
+
+
+@keyframes gray-anim {
+	0% {
+		transform: translate3d(-101%, 0, 0)
+	}
+
+	100% {
+		transform: translate3d(100%, 0, 0)
+	}
+}
+
+@keyframes t-anim {
+	0% {
+		color: #fff
+	}
+
+	40% {
+		color: #000
+	}
+
+	100% {
+		color: #fff
+	}
+}
+
+
+.viewall {
+
+	position: relative;
+	display: block;
+	margin-top: 50px;
+	font-weight: 200;
+	font-size: 50px;
+	z-index: 2;
+	overflow: hidden;
+}
+
+
+.viewall::before,
+.viewall::after {
+
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #000;
+	z-index: 0;
+
+}
+
+.viewall::after {
+
+	z-index: 1;
+	background: #f7f3f3;
+	transform: translate3d(-101%, 0, 0)
+}
+
+.viewall:hover::after {
+	animation-name: gray-anim;
+	animation-duration: 1.4s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards
+}
+
+
+@keyframes gray-anim {
+	0% {
+		transform: translate3d(-101%, 0, 0)
+	}
+
+	100% {
+		transform: translate3d(100%, 0, 0)
+	}
+}
+
+.vwtxt {
+	
+	display: block;
+	transition:all .5s ease-out;
+	
+}
+
+
+.viewall:hover .vwtxt {
+	
+	transform: translateX(50px);
+}
+

@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* core.css - 중요공통기능 */
+
+
+/* 웹폰트 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face { font-family: 'HSBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+
+
+
+/* 공통 */
+
+body {
+    
+    font-family:'Jost','Noto Sans KR', sans-serif;
+    /*font-family: 'Gafata', sans-serif; */
+    /*font-family: 'Jost', sans-serif;*/
+    color: #222222;
+    /*line-height: 136%; 16보다 36%가 큰*/
+    font-size: 12px;
+}
+
+
+input, textarea {
+	color: #fff;
+    font-size: 1.25rem;
+    font-family:'Noto Sans KR', sans-serif;
+}
+
+
+
+/* 공통클래스 */
+
+/* 중앙정렬 속박스 */
+.inbox {
+    
+    width: 1762px;
+    max-width: 100%;
+    margin:0 auto;
+	
+    
+}
+
+/* IR(Image replacement) class */
+/* ir 안보이게 (하지만 리더기가 읽음) */
+.ir {
+    
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    
+}
+
+/* 비율 유지 class */
+
+.rbx {
+    
+    position: relative;
+}
+
+.rbx::before{
+    
+    content:"";
+    display: block;
+    padding-top: 70%; /* 비율에 따라 변경 */
+}
+
+/* 비율유지 속박스 */
+.ibx { 
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
