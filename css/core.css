@@ -70,7 +70,7 @@ input, textarea {
     
     content:"";
     display: block;
-    padding-top: 70%; /* 비율에 따라 변경 */
+    padding-top: 0%; /* 비율에 따라 변경 */
 }
 
 /* 비율유지 속박스 */
