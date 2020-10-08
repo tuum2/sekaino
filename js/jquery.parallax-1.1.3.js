@@ -12,7 +12,7 @@ http://www.gnu.org/licenses/gpl.html
 */
 
 (function( $ ){
-	var $window = $(window);
+	var $window = $("#wrap");
 	var windowHeight = $window.height();
 
 	$window.resize(function () {
