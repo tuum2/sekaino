@@ -74,11 +74,11 @@ $(document).ready(function () {
 		var tg3pos = tg3.offset().top;
 		//console.log("스케쥴박스:" + tg3pos);
 		var tg2bpos = tgb.offset().top;
-		console.log("비디오박스:" + tg2bpos);
+		//console.log("비디오박스:" + tg2bpos);
 
 		$("#wrap").scroll(function () {
 			var scTop = $(this).scrollTop(); //스크롤이동값
-			console.log("scrollTop:" + scTop);
+			//console.log("scrollTop:" + scTop);
 
 			// 1번 타겟: 배너이미지
 			if (scTop <= 100) {

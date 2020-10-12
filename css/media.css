@@ -1,11 +1,57 @@
 @charset "utf-8";
 
+@media only screen and (max-width:1440px) {
+
+	.gnbbox .gnbclose {
+		right: -31px;
+	}
+
+	.gnbbox .gnbtit h1 a {
+		left: 0;
+		line-height: 78px;
+	}
+
+	.toptit {
+		left: 2%;
+	}
+
+	.ftt div {
+		margin-right: 4%;
+		margin-left: 8px;
+	}
+
+	.ftt {
+		display: flex;
+	}
+
+	.ftt div:last-child {
+		margin-right: 0;
+	}
+
+	.ft address {
+		margin-top: 100px;
+	}
+
+
+}
+
 @media only screen and (max-width:1024px) {
+
+	.banner {
+		padding: 30px;
+		box-sizing: border-box;
+	}
+
+	.banner_h1 a {
+		line-height: 150px;
+	}
 
 	.mpro {
 
-		width: 80%;
-		margin-top: 10%;
+
+		width: 73%;
+		margin-top: 15%;
+
 		left: 183px;
 	}
 
@@ -48,6 +94,11 @@
 
 	.schedule_list_detail {
 		width: auto;
+	}
+
+	.schedule_list_detail li,
+	.infoul li {
+		width: 75vw;
 	}
 
 	.schedule_list {
@@ -99,9 +150,14 @@
 		height: 50vh;
 	}
 
+
 	.ft1 h3 {
 		font-size: 7vw;
 		line-height: 65px;
+	}
+
+	.ftt > div {
+		margin-right: 0;
 	}
 
 	/*
@@ -151,6 +207,27 @@
 
 @media only screen and (max-width:768px) {
 
+	.gnbbox .gnbtit h1 a {
+		line-height: 45px;
+	}
+
+	.gnbbox .fc.gnb {
+		right: 57px;
+		bottom: 87px;
+		transform: scale(2);
+	}
+
+	.banner_h1 a {
+
+		font-size: 150px;
+		line-height: 110px;
+	}
+
+	.banner_h2 {
+		margin-top: 195px;
+	}
+
+
 	.mpro {
 		width: 85%;
 		margin-top: 25%;
@@ -171,12 +248,14 @@
 		font-size: 2vw;
 	}
 
-	.ftt {
-		flex: 1;
-	}
 
-	.fc h3 {
-		margin-top: 0;
+}
+
+@media only screen and (max-width:600px) {
+
+	.mpro {
+		top: 76px;
+		width: 81%;
 	}
 
 }
@@ -192,6 +271,10 @@
 	.banner_h1 a {
 		font-size: 20vw;
 		line-height: 77px;
+	}
+
+	.banner_h2 {
+		margin: 0;
 	}
 
 	#banner {
@@ -301,8 +384,112 @@
 	.cg_sub.vt {
 		left: 51px;
 	}
-	
-	#ft{
-		height:100%;
+
+	#ft {
+		height: 100%;
 	}
+
+	.ft {
+
+		height: 100%;
+		top: 0;
+		transform: translateY(0);
+
+	}
+
+	.ftt {
+		position: relative;
+		height: 94%;
+	}
+
+	.ftt div {
+		width: 50%;
+	}
+
+	.ft1 {
+		position: absolute;
+		top: 100px;
+		left: 30px;
+	}
+
+	.ft1 h3 {
+		width: 100px;
+		line-height: 70px;
+		font-size: 80px;
+	}
+
+	.fsns {
+		position: absolute;
+		right: -183px;
+		top: 13px;
+	}
+
+	.fc {
+		position: absolute;
+		left: 30px;
+		top: 400px;
+
+	}
+
+	.ftt .fc,
+	.ftt .fm {
+		text-align: left;
+	}
+
+	.fc ul a,
+	.fm ul a {
+
+		font-size: 25px;
+	}
+
+	.ftt .fm {
+		position: absolute;
+		right: -170px;
+		top: 400px;
+	}
+
+
+	.ft address {
+		position: absolute;
+		bottom: 30px;
+		left: 50%;
+		font-size: 15px;
+		transform: translateX(-50%);
+		white-space: nowrap;
+	}
+
+}
+
+@media only screen and (max-width:360px) {
+
+	.banner {
+		height: 70%;
+	}
+
+	.ftt div {
+		width: 31%;
+	}
+
+	.ico img {
+		width: 15px;
+	}
+
+	.ft {
+		padding: 0;
+	}
+
+	.ft1 h3 {
+		line-height: 51px;
+		font-size: 58px;
+	}
+
+	.fc ul a,
+	.fm ul a {
+		font-size: 18px;
+	}
+
+	.ftt .fm {
+		right: -218px;
+	}
+
 }
