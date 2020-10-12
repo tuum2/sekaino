@@ -101,7 +101,7 @@ $(document).ready(function () {
 			// 2번 타겟: .video 
 			if (scTop > tg2pos - 600 && scTop < tg2pos - 400) {
 				tg2.css({
-					top: "0%"
+					top: "5%"
 				});
 			} else if (scTop > tg2pos - 400 && scTop < tg2pos) {
 				tg2.css({

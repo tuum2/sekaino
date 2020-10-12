@@ -244,11 +244,6 @@
 		width: 86%;
 	}
 
-	.cg_sub h3 {
-		font-size: 2vw;
-	}
-
-
 }
 
 @media only screen and (max-width:600px) {
@@ -321,10 +316,11 @@
 
 	.topics_title h2 {
 		top: -230px;
+		font-size: 50px;
 	}
 
 	.topics_list {
-		top: -63px;
+		top: -100px;
 		margin-left: 10%;
 		position: relative;
 	}
@@ -350,7 +346,11 @@
 	}
 
 	.schedule_title h2 {
-		font-size: 8vw;
+		font-size: 50px;
+	}
+	
+	.schabt b, .iflitit{
+		font-size: 14px;
 	}
 
 	.info_title {
