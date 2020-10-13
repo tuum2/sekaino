@@ -6,6 +6,17 @@ console.log("페이지이름:" + pgnm);
 
 
 $(document).ready(function () {
+	
+	var vl = $('.vdul li');
+	var index = 0;
+	
+	for(var i=0;i<4;i++){
+		
+	$('.lazy_wrap_v').eq(i).css({
+		backgroundImage:"url(../images/thum"+(i+1)+".jpg)"
+	});
+	}
+	
 
 	$("#wrap").smoothWheel();
 
@@ -18,45 +29,44 @@ $(document).ready(function () {
 
 
 	$('.menu_toggle').on('click', function () {
-
-
 		$('.gnbarea').fadeIn();
-
 	});
 
 	$('.gnbclose').click(function () {
-
 		$('.gnbarea').fadeOut();
-
 	});
 
 	$('.ytc').click(function () {
 		$('#yto').fadeOut(300);
 	}); /// 유튜브 뮤직비디오 창 닫기 //
 
+	
+	
 	$('.vdul li').click(function () {
-		var vl = $('.vdul li');
-		var vlurl = $(this,'.vdul li').attr("data-url");
-		console.log(vlurl);
-		
-		$('#yto').fadeIn(300);
-		
-		
-		/*$('#ytv').attr("src","https://www.youtube.com/embed/" + vlurl);*/
-		
-		var viwevideo = function(){
-			
-			$('#screen').append('<iframe id="ytv" src="https://www.youtube.com/embed/'+vlurl+'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
-			
-			}
-		
-			$('#screen').html("");
-			
-			setTimeout(viwevideo,10);
-		
 
-		
+		//console.log(index);
+		var vlurl = $(this, '.vdul li').attr("data-url");
+		//console.log(vlurl);
+
+		$('#yto').fadeIn(300);
+
+
+		/*$('#ytv').attr("src","https://www.youtube.com/embed/" + vlurl);*/
+
+		var viwevideo = function () {
+
+			$('#screen').append('<iframe id="ytv" src="https://www.youtube.com/embed/' + vlurl + '" frameborder="0" allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+
+		}
+
+		$('#screen').html("");
+
+		setTimeout(viwevideo, 10);
+
 	}); /// 유튜브 뮤직비디오 창 열기 //
+
+
+
 
 
 	// 메인페이지에서만 스크롤액션함
@@ -69,7 +79,7 @@ $(document).ready(function () {
 		var tgb = $("#video");
 		var tg2pos = tg2.offset().top;
 		//console.log("2번위치:" + tg2pos);
-		
+
 		var tg3 = $('#schedule');
 		var tg3pos = tg3.offset().top;
 		//console.log("스케쥴박스:" + tg3pos);
@@ -83,35 +93,18 @@ $(document).ready(function () {
 			// 1번 타겟: 배너이미지
 			if (scTop <= 100) {
 				tg1.css({
-					top: "10px"
+					top: "10%"
 				});
 			} else if (scTop > 100 && scTop < 300) {
 				tg1.css({
-					top: "50px"
+					top: "15%"
 				});
 			} else if (scTop > 300 && scTop < 600) {
 				tg1.css({
-					top: "150px"
+					top: "25%"
 				});
 			}
 
-
-
-
-			// 2번 타겟: .video 
-			if (scTop > tg2pos - 600 && scTop < tg2pos - 400) {
-				tg2.css({
-					top: "5%"
-				});
-			} else if (scTop > tg2pos - 400 && scTop < tg2pos) {
-				tg2.css({
-					top: "10%"
-				});
-			} else if (scTop > tg2pos && scTop < tg2pos + 400) {
-				tg2.css({
-					top: "20%"
-				});
-			}
 
 
 			if (scTop < tg3pos) {
@@ -132,7 +125,7 @@ $(document).ready(function () {
 				$('.toptit').css({
 					color: "#000"
 				});
-			} else if (scTop = tg2bpos) {
+			} else {
 
 				$('.toptit').css({
 					color: "#fff"
@@ -178,9 +171,9 @@ $(document).ready(function () {
 	/// 인포페이지일때 ///////////////////
 	if (pgnm === "info") {
 
-		$(".content").delay(1000).animate({
+		$(".content").delay(300).animate({
 			marginTop: "0"
-		}, 1000, "easeOutSine");
+		}, 500, "easeOutSine");
 
 
 

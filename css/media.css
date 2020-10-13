@@ -2,13 +2,28 @@
 
 @media only screen and (max-width:1440px) {
 
-	.gnbbox .gnbclose {
-		right: -31px;
+	.banner_h1 a {
+		top: 8%;
 	}
 
-	.gnbbox .gnbtit h1 a {
-		left: 0;
-		line-height: 78px;
+
+	.banner_h2 {
+
+
+		bottom: 10%;
+
+
+	}
+
+	.banner_h3 {
+
+		bottom: 5%;
+
+
+	}
+
+	.gnbbox .gnbclose {
+		right: -31px;
 	}
 
 	.toptit {
@@ -25,7 +40,7 @@
 	}
 
 	.ftt div:last-child {
-		margin-right: 0;
+		margin-left: 63px;
 	}
 
 	.ft address {
@@ -40,6 +55,7 @@
 	.banner {
 		padding: 30px;
 		box-sizing: border-box;
+
 	}
 
 	.banner_h1 a {
@@ -47,16 +63,23 @@
 	}
 
 	.mpro {
-
-
-		width: 73%;
 		margin-top: 15%;
-
-		left: 183px;
 	}
 
 	.toptit {
 		left: 3%;
+	}
+
+	.gnbbox .gnbtit h1 a {
+		left: 0;
+	}
+
+	.gnbbox .gnb {
+		right: 30px;
+	}
+	
+	.gnbbox .gnbclose{
+		font-size: 80px;
 	}
 
 	.hambuger span {
@@ -72,7 +95,7 @@
 	}
 
 	.schedule_title h2 {
-		top: -74px;
+		top: -50px;
 	}
 
 	.topics_list {
@@ -109,7 +132,7 @@
 
 	.info_title {
 		position: absolute;
-		top: -155px;
+		top: -204px;
 		left: 50%;
 		transform: translateX(-50%);
 	}
@@ -122,34 +145,42 @@
 
 	/* video */
 
+	#video {
+		height: 100%;
+	}
+
+
 	.video_title {
-		position: absolute;
-		top: -93px;
+		top: 70px;
 		left: 50%;
 		transform: translateX(-50%);
 	}
 
-	.topics_list.vdul {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+	.vdul {
+
+		position: absolute;
+		right: 2%;
+		top: 58%;
+		transform: translateY(-50%);
+		overflow: hidden;
+		width: 96%;
 
 	}
 
-	.topics_list.vdul li {
-		margin-right: 2%;
-		width: 48%;
+	.gotop {
 
+		height: 62px;
 	}
 
-	.lazy_wrap.vi {
-		width: 76%;
-	}
 
 	#ft {
 		height: 50vh;
 	}
 
+	.ft {
+		padding: 0 20px;
+		padding-top: 100px;
+	}
 
 	.ft1 h3 {
 		font-size: 7vw;
@@ -160,56 +191,11 @@
 		margin-right: 0;
 	}
 
-	/*
 
-
-	.topics_list li {
-
-		width: 50%;
-		position: relative;
-
-	}
-
-	.cg_sub.vt {
-
-		left: 0px;
-	}
-
-	.vi::after {
-		position: absolute;
-		content: '';
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		background-color: rgba(255, 255, 255, .0);
-		transition: .5s linear;
-
-	}
-
-	.lazy_wrap.vi {
-		overflow: hidden;
-	}
-
-	.lazy_wrap.vi img {
-		width: 100%;
-
-	}
-
-	.vi:hover:after {
-		background-color: rgba(255, 255, 255, .3);
-	}
-
-
-
-*/
 }
 
 @media only screen and (max-width:768px) {
 
-	.gnbbox .gnbtit h1 a {
-		line-height: 45px;
-	}
 
 	.gnbbox .fc.gnb {
 		right: 57px;
@@ -223,16 +209,17 @@
 		line-height: 110px;
 	}
 
-	.banner_h2 {
-		margin-top: 195px;
-	}
-
 
 	.mpro {
 		width: 85%;
 		margin-top: 25%;
 		left: 88px;
 	}
+	
+	.gnbbox .gnb li a{
+		font-size: 6vw;
+	}
+	
 
 	.topics_list .date {
 		top: 9px;
@@ -244,38 +231,53 @@
 		width: 86%;
 	}
 
+	.vdultit {
+		font-size: 1rem;
+	}
+
+
 }
 
 @media only screen and (max-width:600px) {
 
-	.mpro {
-		top: 76px;
-		width: 81%;
+	#banner {
+		height: 135vw;
 	}
+
+	.mpro {
+		top: 112px;
+		width: 77%;
+	}
+
+	.banner {
+		height: 137vw;
+	}
+
+	.cg_sub h3 {
+		font-size: 15px;
+	}
+
+
 
 }
 
 @media only screen and (max-width:500px) {
 
 
-	.page {
-		height: 90%;
+	.gnbbox .gnbtit h1 a {
+		font-size: 6rem;
+		line-height: 80px;
 	}
 
+	.gnbbox .gnb li a {
+		font-size: 6vw;
+	}
+	
 
 	.banner_h1 a {
-		font-size: 20vw;
-		line-height: 77px;
-	}
-
-	.banner_h2 {
-		margin: 0;
-	}
-
-	#banner {
-		top: 2%;
-		left: 2%;
-		transform: none;
+		font-size: 99px;
+		line-height: 73px;
+		left: 6%;
 	}
 
 	.menu_toggle {
@@ -287,9 +289,9 @@
 	}
 
 	.mpro {
-		width: 90%;
-		margin-top: 81%;
-		left: 34px;
+
+		margin-top: 57%;
+
 	}
 
 	.toptit {
@@ -299,19 +301,21 @@
 	}
 
 	.banner_h2 {
-		width: 87px;
-		position: absolute;
-		width: 87px;
-		right: 0;
-		top: 0;
+		left: 82%;
+		top: 55px;
+		width: 30px;
+		padding: 0;
 	}
 
 	.banner_h3 {
-		text-align: end;
+		top: 38%;
+		left: 65%;
+		padding: 0;
+		text-align: right;
 	}
 
 	.topics {
-		height: 200%;
+		height: 157%;
 	}
 
 	.topics_title h2 {
@@ -341,6 +345,10 @@
 		height: 139px;
 	}
 
+	.schedule_title h2 {
+		top: -38px;
+	}
+
 	.viewall {
 		font-size: 6vw;
 	}
@@ -348,14 +356,15 @@
 	.schedule_title h2 {
 		font-size: 50px;
 	}
-	
-	.schabt b, .iflitit{
+
+	.schabt b,
+	.iflitit {
 		font-size: 14px;
 	}
 
 	.info_title {
-		font-size: 8vw;
-		top: -92px;
+		font-size: 50px;
+		top: -160px;
 	}
 
 	.infoul {
@@ -363,7 +372,7 @@
 	}
 
 	#video {
-		height: 200%;
+		height: 143%;
 	}
 
 	.video {
@@ -371,18 +380,24 @@
 	}
 
 	.video_title {
-		top: -150px;
+
 		font-size: 8vw;
 	}
 
-	.topics_list.vdul li {
-		width: 100%;
-		left: -33px;
-		position: relative;
+	.vdul {
+		top: 172px;
+		transform: translateY(0%);
+
 	}
 
-	.cg_sub.vt {
-		left: 51px;
+	.vdul li {
+		width: 100%;
+
+	}
+
+	.vdul li:nth-child(2),
+	.vdul li:nth-child(3) {
+		margin-bottom: 5%;
 	}
 
 	#ft {
@@ -460,10 +475,85 @@
 
 }
 
+@media only screen and (max-width:412px) {
+
+	.banner_h3 {
+		left: 60%;
+	}
+
+	.mpro {
+		margin-top: 55%;
+		left: 10px;
+		width: 96%;
+	}
+
+
+}
+
+@media only screen and (max-width:380px) {
+
+	.banner_h1 a {
+		font-size: 67px;
+		line-height: 51px;
+	}
+
+	.banner_h2 {
+		left: 77%;
+	}
+
+	.banner_h3 {
+		left: 55%;
+	}
+
+}
+
 @media only screen and (max-width:360px) {
 
-	.banner {
-		height: 70%;
+
+	html,
+	body {
+		overflow: scroll;
+	}
+
+	
+
+
+	.gnbbox .gnbtit h1 a {
+		font-size: 6rem;
+		line-height: 80px;
+	}
+
+	.gnbbox .gnb {
+		top: 66%;
+		left: 38%;
+		transform: translate(-50%, -50%);
+	}
+
+	.gnbbox .gnb li a {
+		font-size: 10vw;
+		text-align: left;
+	}
+	
+	
+
+	.gnbbox .gnbclose {
+		font-size: 20vw;
+	}
+
+	.menu_toggle {
+		top: 43px;
+	}
+	
+	.topics{
+		height:163%;
+	}
+
+	.topics_list li {
+		margin-bottom: 17%;
+	}
+
+	.gotop {
+		height: 50px;
 	}
 
 	.ftt div {

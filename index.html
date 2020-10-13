@@ -45,7 +45,7 @@
 						</a></h1>
 				</div>
 				<div class="gnbclose">×</div>
-				<div class="fc gnb">
+				<div class="gnb">
 					<h3>CONTENTS : </h3>
 					<ul>
 						<li>
@@ -79,11 +79,12 @@
 	<div id="wrap">
 
 		<!-- 1. 배너 영역 -->
-		<div class="page banner">
-			<img src="images/main_profile.jpg" class="mpro" data-enllax-ratio=".8" data-enllax-type="foreground">
+		<div class="page" id="banner">
+			
 
 
-			<section class="inbox" id="banner">
+			<section class="inbox banner">
+				<img src="images/main_profile.jpg" class="mpro" data-enllax-ratio=".8" data-enllax-type="foreground">
 
 				<div class="banner_h1">
 					<h1><a href="#">
@@ -159,7 +160,7 @@
 									<div class="cg">
 										<span>CATEGORY</span>
 									</div>
-									<h3 class="sub">SEKAI NO OWARI TikTok LIVE配信決定！</h3>
+									<h3 class="sub">SEKAI NO OWARI TikTok Live!</h3>
 								</div>
 								<p class="lazy_wrap nof">
 									<img src="images/jacket/album_eye.jpg" alt="">
@@ -247,7 +248,7 @@
 		<!-- 4. INFO -->
 
 		<div class="page" id="info">
-		
+
 			<section class="inbox info">
 
 				<h2 class="info_title">INFO</h2>
@@ -314,84 +315,69 @@
 		<div class="page" id="video">
 			<section class="inbox video">
 				<h2 class="video_title">VIDEO</h2>
-				<ul class="topics_list vdul">
-					<li data-url="rGGPG0Hbh8w">
-						<a href="#" class="ta">
+				<div class="vl">
+					<ul class="vdul">
+						<li data-url="rGGPG0Hbh8w">
 
-							<div class="cg_sub nof vt">
-								<div class="cg">
-									<span>CATEGORY : </span><small> 2020.07.28</small>
-								</div>
-								<h3 class="sub">「umbrella」</h3>
-							</div>
-							<p class="lazy_wrap nof vi">
-								<img src="images/thum1.jpg" alt="">
+							<div class="lazy_wrap_v">
 								<svg class="circle-fill">
 									<circle cx="41" cy="41" r="37" stroke="#fff" stroke-width="2"></circle>
 									<polygon fill="none" stroke="#fff" stroke-width="2" points="32,25 32,58 60,42"></polygon>
 								</svg>
-							</p>
-
-
-						</a>
-					</li>
-					<li data-url="6oq6aBGbKC0"><a href="#" class="ta">
-
-							<div class="cg_sub nof vt">
-								<div class="cg">
-									<span>CATEGORY : </span><small> 2020.07.28</small>
-								</div>
-								<h3 class="sub">「umbrella」</h3>
 							</div>
-							<p class="lazy_wrap nof vi">
-								<img src="images/thum2.jpg" alt="">
+							<span class="vdultit">
+								CATEGORY:
+								<small>MEDIA</small>
+								<strong>「umbrella」</strong>
+							</span>
+						</li>
+						<li data-url="6oq6aBGbKC0">
+							<div class="lazy_wrap_v">
+
 								<svg class="circle-fill">
 									<circle cx="41" cy="41" r="37" stroke="#fff" stroke-width="2"></circle>
 									<polygon fill="none" stroke="#fff" stroke-width="2" points="32,25 32,58 60,42"></polygon>
 								</svg>
-							</p>
-						</a></li>
-					<li data-url="Xw0URnMrFV8"><a href="#" class="ta">
-
-							<div class="cg_sub nof vt">
-								<div class="cg">
-									<span>CATEGORY : </span><small> 2020.07.28</small>
-								</div>
-								<h3 class="sub">「umbrella」</h3>
 							</div>
-							<p class="lazy_wrap nof vi">
-								<img src="images/thum3.jpg" alt="">
+							<span class="vdultit">
+								CATEGORY:
+								<small>MEDIA</small>
+								<strong>「umbrella」</strong>
+							</span>
+						</li>
+						<li data-url="Xw0URnMrFV8">
+							<div class="lazy_wrap_v">
+
 								<svg class="circle-fill">
 									<circle cx="41" cy="41" r="37" stroke="#fff" stroke-width="2"></circle>
 									<polygon fill="none" stroke="#fff" stroke-width="2" points="32,25 32,58 60,42"></polygon>
 								</svg>
-							</p>
-						</a></li>
-					<li data-url="bsWw7XTVo3k"><a href="#" class="ta">
-
-							<div class="cg_sub nof vt">
-								<div class="cg">
-									<span>CATEGORY : </span><small> 2020.07.28</small>
-								</div>
-								<h3 class="sub">「umbrella」</h3>
 							</div>
-							<p class="lazy_wrap nof vi">
-								<img src="images/thum4.jpg" alt="">
+							<span class="vdultit">
+								CATEGORY:
+								<small>MEDIA</small>
+								<strong>「umbrella」</strong>
+							</span>
+						</li>
+						<li data-url="bsWw7XTVo3k">
+							<div class="lazy_wrap_v">
+
 								<svg class="circle-fill">
 									<circle cx="41" cy="41" r="37" stroke="#fff" stroke-width="2"></circle>
 									<polygon fill="none" stroke="#fff" stroke-width="2" points="32,25 32,58 60,42"></polygon>
 								</svg>
-							</p>
-						</a></li>
-				</ul>
-
+							</div>
+							<span class="vdultit">
+								CATEGORY:
+								<small>MEDIA</small>
+								<strong>「umbrella」</strong>
+							</span>
+						</li>
+					</ul>
+				</div>
 			</section>
-			<!--top 버튼-->
-			<div class="gotop">
-				<span></span>
-				<span></span>
-			</div>
-			
+
+
 			<!--뮤직비디오 새창열기-->
 			<div id="yto">
 				<div id="screen">
@@ -399,22 +385,28 @@
 				</div>
 				<div class="ytc">×</div>
 			</div>
-			
-			
+
+
 		</div>
-		
+
 
 		<!-- 6. FOOTER -->
 
 		<footer class="page" id="ft">
+			<div class="gotop">
+				<span></span>
+				<span></span>
+			</div>
 			<section class="inbox ft">
+				<!--top 버튼-->
+
 				<div class="ftt">
 					<div class="ft1">
 						<h3>
 							<a href="#">SEKAI NO OWARI</a>
 						</h3>
 						<ul class="fsns">
-							<li>
+							<li data-url="rGGPG0Hbh8w">
 								<a href="#" class="ico">
 									<img src="images/sns/fb_w.png" alt="">
 
