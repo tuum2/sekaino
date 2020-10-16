@@ -38,15 +38,35 @@ input, textarea {
 
 /* 공통클래스 */
 
-/* 중앙정렬 속박스 */
-.inbox {
-    
-    width: 1762px;
-    max-width: 100%;
-    margin:0 auto;
-	
-    
+#wrap {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
 }
+
+.page {
+
+	width: 100%;
+	height: 100%;
+	/*   outline: 2px dotted red;*/
+}
+
+.inbox {
+	
+	/*top: 50%;*/
+	/*세로크기의 중앙에 오도록 셋팅*/
+	/*transform: translateY(-50%);*/
+	width: 100%;
+	max-width: 1440px;
+	/*height: 100%;*/
+	margin: 0 auto;
+	/*min-height: 100vh;*/
+
+}
+
+
+/* 중앙정렬 속박스 */
+
 
 /* IR(Image replacement) class */
 /* ir 안보이게 (하지만 리더기가 읽음) */

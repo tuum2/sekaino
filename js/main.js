@@ -7,183 +7,189 @@ console.log("페이지이름:" + pgnm);
 
 $(document).ready(function () {
 
-    var vl = $('.vdul li');
-    var index = 0;
+	var vl = $('.vdul li');
+	var index = 0;
 
+	$("#wrap").smoothWheel();
 
+	$("#wrap").scrollStopped(function () {
+		//console.log("스크롤끝확인!");
+		// 부드러운 스크롤 세로 스크롤값에 현재 스크롤위치값 넣기!
+		// 부호는 반대임!
+		currentY = -$(this).scrollTop();
+	});
 
 
-    $("#wrap").smoothWheel();
+	$('.menu_toggle').on('click', function () {
+		$('.gnbarea').fadeIn();
+	});
 
-    $("#wrap").scrollStopped(function () {
-        //console.log("스크롤끝확인!");
-        // 부드러운 스크롤 세로 스크롤값에 현재 스크롤위치값 넣기!
-        // 부호는 반대임!
-        currentY = -$(this).scrollTop();
-    });
+	$('.gnbclose').click(function () {
+		$('.gnbarea').fadeOut();
+	});
 
+	$('.ytc').click(function () {
+		$('#yto').fadeOut(300);
+	}); /// 유튜브 뮤직비디오 창 닫기 //
 
-    $('.menu_toggle').on('click', function () {
-        $('.gnbarea').fadeIn();
-    });
 
-    $('.gnbclose').click(function () {
-        $('.gnbarea').fadeOut();
-    });
 
-    $('.ytc').click(function () {
-        $('#yto').fadeOut(300);
-    }); /// 유튜브 뮤직비디오 창 닫기 //
+	$('.vdul li').click(function () {
 
+		//console.log(index);
+		var vlurl = $(this, '.vdul li').attr("data-url");
+		//console.log(vlurl);
 
+		$('#yto').fadeIn(300);
 
-    $('.vdul li').click(function () {
 
-        //console.log(index);
-        var vlurl = $(this, '.vdul li').attr("data-url");
-        //console.log(vlurl);
+		/*$('#ytv').attr("src","https://www.youtube.com/embed/" + vlurl);*/
 
-        $('#yto').fadeIn(300);
+		var viwevideo = function () {
 
+			$('#screen').append('<iframe id="ytv" src="https://www.youtube.com/embed/' + vlurl + '" frameborder="0" allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 
-        /*$('#ytv').attr("src","https://www.youtube.com/embed/" + vlurl);*/
+		}
 
-        var viwevideo = function () {
+		$('#screen').html("");
 
-            $('#screen').append('<iframe id="ytv" src="https://www.youtube.com/embed/' + vlurl + '" frameborder="0" allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+		setTimeout(viwevideo, 10);
 
-        }
+	}); /// 유튜브 뮤직비디오 창 열기 //
 
-        $('#screen').html("");
 
-        setTimeout(viwevideo, 10);
 
-    }); /// 유튜브 뮤직비디오 창 열기 //
 
 
+	// 메인페이지에서만 스크롤액션함
+	if (pgnm === "index") {
 
+		// 스크롤 액션 ///
 
+		var tg1 = $(".mpro");
+		var tg2 = $(".video");
+		var tgb = $("#video");
+		var tg2pos = tg2.offset().top;
+		//console.log("2번위치:" + tg2pos);
 
-    // 메인페이지에서만 스크롤액션함
-    if (pgnm === "index") {
+		var tg3 = $('#schedule');
+		var tg4 = $('.topics');
+		var tg3pos = tg3.offset().top;
+		//console.log("스케쥴박스:" + tg3pos);
+		var tg2bpos = tgb.offset().top;
+		//console.log("비디오박스:" + tg2bpos);
+		var tg4pos = tg4.offset().top;
 
-        // 스크롤 액션 ///
+		$('.topics_list').css({
 
-        var tg1 = $(".mpro");
-        var tg2 = $(".video");
-        var tgb = $("#video");
-        var tg2pos = tg2.offset().top;
-        //console.log("2번위치:" + tg2pos);
+			opacity: 0,
+			position: "relative",
+			right: "-100%"
+		});
 
-        var tg3 = $('#schedule');
-        var tg3pos = tg3.offset().top;
-        //console.log("스케쥴박스:" + tg3pos);
-        var tg2bpos = tgb.offset().top;
-        //console.log("비디오박스:" + tg2bpos);
 
-        $("#wrap").scroll(function () {
-            var scTop = $(this).scrollTop(); //스크롤이동값
-            //console.log("scrollTop:" + scTop);
+		$("#wrap").scroll(function () {
+			var scTop = $(this).scrollTop(); //스크롤이동값
+			//console.log("scrollTop:" + scTop);
 
-            // 1번 타겟: 배너이미지
-            if (scTop <= 100) {
-                tg1.css({
-                    top: "10%"
-                });
-            } else if (scTop > 100 && scTop < 300) {
-                tg1.css({
-                    top: "15%"
-                });
-            } else if (scTop > 300 && scTop < 600) {
-                tg1.css({
-                    top: "25%"
-                });
-            }
+			// 1번 타겟: 배너이미지
+			if (scTop <= 100) {
+				tg1.css({
+					top: "5%"
+				});
+			} else if (scTop > 100 && scTop < 300) {
+				tg1.css({
+					top: "100px"
+				});
+			} else if (scTop > 300 && scTop < 600) {
+				tg1.css({
+					top: "200px"
+				});
+			}
 
+			if (scTop > tg4pos - 800) {
+				$('.topics_list').css({
 
+					opacity: 1,
+					position: "relative",
+					right: "0%"
+				});
 
-            if (scTop < tg3pos) {
+			}
 
-                $('.menu_toggle span').css({
-                    backgroundColor: "#fff"
-                });
+			if (scTop < tg3pos) {
 
-                $('.toptit').css({
-                    color: "#fff"
-                });
-            } else if (scTop > tg3pos - 400 && scTop < tg2bpos) {
+				$('.menu_toggle span').css({
+					backgroundColor: "#fff"
+				});
 
-                $('.menu_toggle span').css({
-                    backgroundColor: "#000"
-                });
+				$('.toptit').css({
+					color: "#fff"
+				});
 
-                $('.toptit').css({
-                    color: "#000"
-                });
-            } else {
 
-                $('.toptit').css({
-                    color: "#fff"
-                });
+			} else if (scTop > tg3pos - 400 && scTop < tg2bpos) {
 
-            }
+				$('.menu_toggle span').css({
+					backgroundColor: "#000"
+				});
 
-            if (scTop > 0 && scTop < 620) {
+				$('.toptit').css({
+					color: "#000"
+				});
 
-                $('.toptit').fadeOut(300);
-            } else if (scTop > 621) {
 
-                $('.toptit').fadeIn(300);
-            }
+			} else {
 
+				$('.toptit').css({
+					color: "#fff"
+				});
 
 
 
+			}
 
+			if (scTop > 0 && scTop < 620) {
 
+				$('.toptit').fadeOut(300);
+			} else if (scTop > 621) {
 
+				$('.toptit').fadeIn(300);
+			}
 
-        }); // scroll ////////////
+		}); // scroll ////////////
 
+	} ////// if : 메인페이지만 ////////////////////////
 
-        /* 고 탑 버튼 */
-        $('.gotop, .toptit').click(function () {
 
-            $("#wrap").animate({
-                scrollTop: 0
-            }, 500);
+	/// 인포페이지일때 ///////////////////
+	if (pgnm === "info") {
 
-            return false;
+		$(".content").delay(300).animate({
+			marginTop: "0"
+		}, 500, "easeOutSine");
 
-        }); // click /////////////////
+	} /////////// if : 인포페이지만 ///////////////////////
 
-        for (var i = 0; i < 4; i++) {
+	/* 고 탑 버튼 */
+	$('.gotop, .toptit').click(function () {
 
-            $('.lazy_wrap_v').eq(i)
-                .css({
-                    backgroundImage: "url(../images/thum" + (i + 1) + ".jpg)"
-                });
-//backgroundImage: "url(../images/thum" + (i + 1) + ".jpg)"
-        }
+		$("#wrap").animate({
+			scrollTop: 0
+		}, 500);
 
+		return false;
 
-    } ////// if : 메인페이지만 ////////////////////////
+	}); // click /////////////////
 
+	for (var i = 0; i < 4; i++) {
 
-    /// 인포페이지일때 ///////////////////
-    if (pgnm === "info") {
-
-        $(".content").delay(300).animate({
-            marginTop: "0"
-        }, 500, "easeOutSine");
-
-
-
-
-
-    } /////////// if : 인포페이지만 ///////////////////////
-
-
+		$('.lazy_wrap_v').eq(i)
+			.css({
+				backgroundImage: "url(../images/thum" + (i + 1) + ".jpg)"
+			});
+		//backgroundImage: "url(../images/thum" + (i + 1) + ".jpg)"
+	}
 
 
 
@@ -196,10 +202,10 @@ $(document).ready(function () {
 
 
 $.fn.scrollStopped = function (callback) { //제이쿼리플러그인 만드는방식.
-    var _this = this,
-        $this = $(_this);
-    $this.scroll(function (event) {
-        clearTimeout($this.data('scrollTimeout'));
-        $this.data('scrollTimeout', setTimeout(callback.bind(_this), 250, event));
-    });
+	var _this = this,
+		$this = $(_this);
+	$this.scroll(function (event) {
+		clearTimeout($this.data('scrollTimeout'));
+		$this.data('scrollTimeout', setTimeout(callback.bind(_this), 250, event));
+	});
 }; //////////// 스크롤멈춤 이벤트 함수 ////////////////////
