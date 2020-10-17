@@ -173,7 +173,8 @@ $(document).ready(function () {
 
 	/* 고 탑 버튼 */
 	$('.gotop, .toptit').click(function () {
-
+        currentY = 0;
+        //부드러운 스크롤에서 사용하는 위치값을 0으로 초기화함!
 		$("#wrap").animate({
 			scrollTop: 0
 		}, 500);
